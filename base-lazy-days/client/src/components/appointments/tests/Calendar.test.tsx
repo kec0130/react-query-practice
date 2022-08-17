@@ -2,7 +2,6 @@ import { screen } from '@testing-library/react';
 import { rest } from 'msw';
 
 import { server } from '../../../mocks/server';
-// import { defaultQueryClientOptions } from '../../../react-query/queryClient';
 import { renderWithQueryClient } from '../../../test-utils';
 import { Calendar } from '../Calendar';
 
