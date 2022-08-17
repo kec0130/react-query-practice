@@ -4,7 +4,6 @@ import { ReactElement } from 'react';
 import { QueryClient, QueryClientProvider, setLogger } from 'react-query';
 
 import { generateQueryClient } from '../react-query/queryClient';
-// import { defaultQueryClientOptions } from '../react-query/queryClient';
 
 // suppress errors
 setLogger({
@@ -35,9 +34,9 @@ export function renderWithQueryClient(
 }
 
 // for testing custom hooks
-// export const createQueryClientWrapper = (): React.FC => {
-//   const queryClient = generateTestQueryClient();
-//   return ({ children }) => (
-//     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-//   );
-// };
+export const createQueryClientWrapper = (): React.FC => {
+  const queryClient = generateTestQueryClient();
+  return ({ children }) => (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  );
+};
